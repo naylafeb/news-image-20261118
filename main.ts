@@ -1,10 +1,10 @@
 import { copyFileSync, existsSync, readFileSync } from "node:fs";
 
-// The entry is a single image: a newspaper front page summing up
+// Round 2 entry: a fresh front page, "THE GLOBAL HERALD", summing up
 // Wednesday 18 November 2026 — the Gulf escalation as the U.S. strikes
 // Qeshm Island and Iran answers with drones at Kuwait and Bahrain, the
 // Kerch Bridge hit again, Xi meeting Putin before the Trump talks,
-// Peltola winning Alaska, and Ebola doubling in Congo. Copy it
+// Peltola winning Alaska, and Ebola doubling in Congo. Copy the image
 // byte-for-byte to the output dir.
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 const src = new URL("./entry.png", import.meta.url);
