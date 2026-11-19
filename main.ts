@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, readFileSync, statSync } from "node:fs";
+import { accessSync, constants, copyFileSync, existsSync, mkdirSync, readFileSync, statSync } from "node:fs";
 
 // Round 3 entry for news-image-20261118: "THE GLOBAL HERALD — THE WHOLE
 // DAY IN ONE PAGE". The front page itself is drawn ahead of time (see
@@ -54,6 +54,18 @@ if (isPng) {
 }
 
 const target = `${OUT_DIR}/entry.png`;
+
+// The output directory may not exist yet when the harness points at a
+// fresh temp dir, and the copy would then fail with a bare ENOENT.
+// Create it (with any missing parents) and refuse to continue if it
+// still cannot be written to, instead of handing in nothing.
+mkdirSync(OUT_DIR, { recursive: true });
+try {
+  accessSync(OUT_DIR, constants.W_OK);
+} catch {
+  fail(`output directory ${OUT_DIR} is not writable`);
+}
+
 copyFileSync(SOURCE, target);
 
 // Confirm the copy landed whole: the output must be the same size as
