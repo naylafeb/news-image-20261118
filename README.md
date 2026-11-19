@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261118/naylafeb/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/naylafeb/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-A fresh newspaper front page — "THE GLOBAL HERALD" — that sums up Wednesday 18 November 2026 in one image: the Gulf escalation as the U.S. strikes Qeshm Island and Iran answers with drones at Kuwait and Bahrain, Ukraine hitting the Kerch Bridge again, Xi meeting Putin before the Trump trilateral, Peltola winning Alaska, and Ebola doubling in Congo — plus Cyclone Xavier, the Siberian plane crash, and the U.S. losing measles-free status.
+A dense newspaper front page — "THE GLOBAL HERALD — THE WHOLE DAY IN ONE PAGE" — that sums up Wednesday 18 November 2026 in one image with 40 real, date-checked stories across 7 regions: the Gulf escalation (U.S. jets hit Qeshm Island, Iran answers with drones in Bahrain and Kuwait, the Tara Gas tanker burns in the Strait of Hormuz), a drawn Gulf map, a day-in-order strip, and a two-column region grid — Kerch Bridge down, the EU's €45bn Ukraine loan, Xi greeting Trump in Shenzhen, Peltola winning Alaska, Nvidia's $115.8bn quarter, Voyager 1 one light-day out, Ebola passing 11,000 cases in Congo, and more.
 
 ## Run it
 
