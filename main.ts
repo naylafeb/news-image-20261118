@@ -16,4 +16,17 @@ const isPng =
   buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47;
 const isJpg = buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
 if (!isPng && !isJpg) throw new Error("entry.png is not a PNG or JPEG");
+// The entry is built at exactly 1024x1024, the competition's cap, so
+// refuse a PNG of any other size instead of handing in a wrong-sized
+// image: a PNG stores its width and height as big-endian uint32s at
+// bytes 16-19 and 20-23 of the file, right after the IHDR length/type.
+if (isPng) {
+  const pngWidth = buf.readUInt32BE(16);
+  const pngHeight = buf.readUInt32BE(20);
+  if (pngWidth !== 1024 || pngHeight !== 1024) {
+    throw new Error(
+      `entry.png is ${pngWidth}x${pngHeight}, expected 1024x1024`,
+    );
+  }
+}
 copyFileSync(src, `${out}/entry.png`);
